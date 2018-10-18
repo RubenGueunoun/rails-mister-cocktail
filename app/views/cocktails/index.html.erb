@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>TOUS NOS COCKTAILS</h1>
+  <ul>
+    <% @cocktails.each do |cocktail| %>
+      <li>
+        <%= link_to cocktail.name, cocktail_path(cocktail) %>
+        <%= link_to edit_cocktail_path(cocktail) do %>
+          <i class="fas fa-edit"></i>
+        <% end %>
+        |
+        <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <i class="fas fa-trash-alt"></i>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+  <hr>
+  <%= link_to 'Add a cocktail', new_cocktail_path %>
+</div>
