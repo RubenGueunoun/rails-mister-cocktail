@@ -36,6 +36,12 @@
 }
 
 /* Navbar link */
+.navbar-name {
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
 .navbar-wagon-link {
   color: #616668;
   font-size: 14px;
@@ -74,4 +80,9 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+
+.rounded {
+  border-radius: 100px;
+
 }
