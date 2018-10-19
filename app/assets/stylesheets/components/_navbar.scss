@@ -20,6 +20,7 @@
 /* Logo */
 .navbar-wagon-brand img {
   height: 50px;
+  box-shadow: 0px 0px 6px lightgrey;
 }
 
 /* User Avatar */
@@ -39,7 +40,10 @@
 /* Basic navbar item */
 .navbar-wagon-item {
   cursor: pointer;
-  padding: 0 20px;
+  margin: 0 5px;
+  padding: 5px 15px;
+  border: 1px solid lightgrey;
+  border-radius: 50px;
 }
 
 /* Navbar link */
@@ -55,7 +59,8 @@
   font-size: 14px;
 }
 .navbar-wagon-link:hover {
-  color: #da552f;
+  color: white;
+  border: 1px solid white;
   text-decoration: none;
 }
 
