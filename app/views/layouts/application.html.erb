@@ -21,19 +21,19 @@
       <!-- Right Navigation -->
       <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-        <a href="/cocktails" class="navbar-wagon-item navbar-wagon-link">Home</a>
-        <a href="/cocktails/new" class="navbar-wagon-item navbar-wagon-link">Add a cocktail</a>
-        <a href="/cocktails/<%= Cocktail.all.sample.id %>" class="navbar-wagon-item navbar-wagon-link">Random cocktail</a>
+        <%= link_to 'Home', cocktails_path, class: "navbar-wagon-item navbar-wagon-link" %>
+        <%= link_to 'Add a cocktail', new_cocktail_path, class: "navbar-wagon-item navbar-wagon-link" %>
+        <%= link_to 'Random cocktail', cocktail_path(Cocktail.all.sample), class: "navbar-wagon-item navbar-wagon-link" %>
       </div>
 
       <!-- Dropdown appearing on mobile only -->
       <div class="navbar-wagon-item hidden-md hidden-lg">
         <div class="dropdown">
-          <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+          <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown" style="color: lightgrey"></i>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-            <li><a href="/cocktails">Home</a></li>
-            <li><a href="/cocktails/new">Add a cocktail</a></li>
-            <li><a href="/cocktails/<%= Cocktail.all.sample.id %>">Random cocktail</a></li>
+            <li><%= link_to 'Home', cocktails_path %></li>
+            <li><%= link_to 'Add a cocktail', new_cocktail_path %></li>
+            <li><%= link_to 'Random cocktail', cocktail_path(Cocktail.all.sample) %></li>
           </ul>
         </div>
       </div>
