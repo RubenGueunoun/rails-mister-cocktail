@@ -9,15 +9,20 @@
   </div>
 </div>
 
-<!-- GRID DES CARDS -->
+
 <div class="container">
+  <!-- ADD BUTTON -->
+  <div class="add-cocktail-position">
+    <%= link_to 'Add a cocktail', new_cocktail_path, class: "add-cocktail" %>
+  </div>
+  <!-- GRID DES CARDS -->
   <div class="row">
     <% @cocktails.each do |cocktail| %>
       <!-- CARD -->
       <div class="col-xs-12 col-sm-6 col-md-3">
         <%= link_to cocktail_path(cocktail) do %>
           <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= asset_url("#{cocktail.id}.jpg") %>);">
-            <div class="card-category">Popular</div>
+            <div class="card-category"><i class="far fa-heart"></i></div>
             <div class="card-description">
               <h2><%= cocktail.name %></h2>
               <p><%= "#{cocktail.ingredients[0].name}, #{cocktail.ingredients[1].name}..." %></p>
@@ -27,7 +32,4 @@
       </div>
     <% end %>
   </div>
-
-  <hr>
-  <%= link_to 'Add a cocktail', new_cocktail_path %>
 </div>

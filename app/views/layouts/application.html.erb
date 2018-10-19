@@ -40,6 +40,19 @@
     </div>
 
     <%= yield %>
+
+    <div class="footer">
+      <div>
+        <p>Ce site a été réalisé par :</p>
+        <p>Ruben Gueunoun</p>
+      </div>
+      <div>
+        <%= link_to 'https://www.linkedin.com/in/ruben-gueunoun-a218b7108/' do %>
+          <i class="fab fa-linkedin-in"></i>
+        <% end %>
+      </div>
+    </div>
+
      <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
   </body>
