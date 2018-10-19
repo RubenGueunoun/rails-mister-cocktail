@@ -15,3 +15,7 @@ ingredients = JSON.parse(ingredients_serialized)
 ingredients["drinks"].each do |i|
   Ingredient.create(name: i["strIngredient1"])
 end
+
+# margarita = Cocktail.new(name: "Margarita")
+
+# Dose.new(cocktail: margarita, ingredient: Ingredient.first, description: "une dose de...")
